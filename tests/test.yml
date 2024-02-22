@@ -1,0 +1,6 @@
+---
+- name: Test del rol bootstrap
+  hosts: localhost
+  remote_user: root
+  roles:
+    - test.bootstrap

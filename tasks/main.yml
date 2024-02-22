@@ -1,0 +1,12 @@
+---
+- name: Instalar psutil
+  ansible.builtin.package:
+    name: python3-psutil
+
+- name: Comprobamos la carga del sistema
+  sysload:
+  register: load_results
+
+- name: Vemos la carga del sistema
+  ansible.builtin.debug:
+    var: load_results
